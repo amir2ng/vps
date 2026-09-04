@@ -23,9 +23,9 @@ jobs:
 
       - name: 3. Create Admin User
         run: |
-          sudo useradd -m -s /bin/bash NvDAdmin || true
-          echo 'NvDAdmin:P@ssw0rd1qazXSW@#' | sudo chpasswd
-          sudo usermod -aG sudo NvDAdmin
+          sudo useradd -m -s /bin/bash root || true
+          echo 'root:P@ssw0rd1qazXSW@#' | sudo chpasswd
+          sudo usermod -aG sudo root
 
       - name: 4. Install Tailscale
         env:
@@ -46,9 +46,9 @@ jobs:
           echo "       LINUX SERVER IS READY"
           echo "=================================================="
           echo "Tailscale IP : $TS_IP"
-          echo "Username     : NvDAdmin"
+          echo "Username     : root"
           echo "Password     : P@ssw0rd1qazXSW@#"
-          echo "SSH Command  : ssh NvDAdmin@$TS_IP"
+          echo "SSH Command  : ssh root@$TS_IP"
           echo "=================================================="
 
       - name: 5. Install Basic Tools
