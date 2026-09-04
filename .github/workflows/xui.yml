@@ -1,4 +1,4 @@
-name: Linux Cloud Server
+name: Linux Cloud Server xui
 
 'on':
   workflow_dispatch:
